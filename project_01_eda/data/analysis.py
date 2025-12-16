@@ -23,3 +23,10 @@ data = {
 df = pd.DataFrame(data)
 
 print(df)
+
+print("\nDataset shape:")
+print(df.shape)
+
+print("\nFirst rows:")
+print(df.head())
+
