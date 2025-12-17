@@ -10,4 +10,4 @@ Each project demonstrates practical skills in Python, SQL, and Data analysis.
 - GIT & Github 
 
 ## Status
-In progress
+Completed
