@@ -42,3 +42,13 @@ print(min_age)
 
 print("\nMaximum customer age:")
 print(max_age)
+
+
+average_purchase_by_country = (
+    df
+    .groupby("country") ["purchase_amount"]
+    .mean()
+)
+
+print("\nAverage purchase amount by country:")
+print(average_purchase_by_country)
