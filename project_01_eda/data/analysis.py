@@ -33,3 +33,12 @@ print(df.head())
 average_age = df["age"].mean()
 print("\nAverage age of customers:")
 print(average_age)
+
+min_age = df["age"].min()
+max_age = df["age"].max()
+
+print("\nMinimum customer age:")
+print(min_age)
+
+print("\nMaximum customer age:")
+print(max_age)
