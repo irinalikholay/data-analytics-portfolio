@@ -30,3 +30,6 @@ print(df.shape)
 print("\nFirst rows:")
 print(df.head())
 
+average_age = df["age"].mean()
+print("\nAverage age of customers:")
+print(average_age)
