@@ -17,3 +17,9 @@ print(df.head())
 print(df.info())
 print(df.isnull().sum())
 print(df.describe())
+
+
+df["revenue"] = df["price"] * df["quantity"]
+
+print("\nRevenue column added:")
+print(df[["price", "quantity", "revenue"]].head())
