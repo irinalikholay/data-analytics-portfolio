@@ -1,12 +1,5 @@
-import os
-print("CWD:", os.getcwd())
-print("FILES:", os.listdir())
 
-import os 
-print("I AM RUNNING THIS FILE")
-print(os.getcwd())
-
-
+import matplotlib.pyplot as plt
 import pandas as pd
 
 # Load dataset 
@@ -33,5 +26,13 @@ revenue_by_country = (
 
 )
 
-print("1nTotal revenue by country:")
+print("\nTotal revenue by country:")
 print(revenue_by_country)
+
+
+revenue_by_country.plot(kind="bar")
+plt.title("Total revenue by country")
+plt.xlabel("Country")
+plt.ylabel("Revenue")
+plt.tight_layout()
+plt.show()
