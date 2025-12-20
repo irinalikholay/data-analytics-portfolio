@@ -23,3 +23,15 @@ df["revenue"] = df["price"] * df["quantity"]
 
 print("\nRevenue column added:")
 print(df[["price", "quantity", "revenue"]].head())
+
+#Revenue by country
+revenue_by_country = (
+    df
+    .groupby("country") ["revenue"]
+    .sum()
+    .sort_values(ascending=False)
+
+)
+
+print("1nTotal revenue by country:")
+print(revenue_by_country)
