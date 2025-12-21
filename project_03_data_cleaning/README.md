@@ -15,7 +15,14 @@ In progress
 
 ## Data quality issues identified 
 
-- Missing values in age, gender, country, signup_date and spend
-- Invalid age values ( e.g. very high age)
-- Negative spend values
-- Dates stored as text instead of date format
+- Missing values were found in the following columns:   "age", "gender", "country" and "spend".
+- One record contained a negative value in the "spend" column.
+- The "signup_date" column was initially stored as text instead of a date format.
+
+## Data cleaning decisions
+
+- Missing values is "age" were filled with the median value to preserve the distribution.
+- Records with negative "spend" values were removed as they are not valid in this context.
+- The "signup_date" column was converted to datetime format.
+- One record with a missing "country" value was kept , as the true value is unknown and the dataset is small.
+- Unrealistic age values (e.g. age > 100 ) were treated as missing and replaced with the median age.
