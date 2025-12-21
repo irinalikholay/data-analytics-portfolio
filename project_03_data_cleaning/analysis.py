@@ -20,6 +20,12 @@ df["age"] = df["age"].fillna(median_age)
 print("Missing value is age after filling")
 print(df["age"].isnull().sum())
 
+#Fill missing country with "Unknown"
+
+df["country"] = df["country"].fillna("Unknown")
+print("Missing values in country after filling:")
+print(df["country"].isnull().sum())
+
 #Remove rows with negative spend
 
 df = df[df["spend"] >= 0 ]

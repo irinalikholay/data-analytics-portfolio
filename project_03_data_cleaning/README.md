@@ -24,5 +24,5 @@ In progress
 - Missing values is "age" were filled with the median value to preserve the distribution.
 - Records with negative "spend" values were removed as they are not valid in this context.
 - The "signup_date" column was converted to datetime format.
-- One record with a missing "country" value was kept , as the true value is unknown and the dataset is small.
+- Missing country values filled with "Unknown".
 - Unrealistic age values (e.g. age > 100 ) were treated as missing and replaced with the median age.
