@@ -8,7 +8,12 @@ print(df.info())
 df["signup_date"] = pd.to_datetime(df["signup_date"])
 print(df.info())
 
+#Mark unrealistic age values as missing 
+
+df.loc[df["age"] > 100, "age"] = None
+
 #Fill missing age with median 
+
 median_age = df["age"].median()
 df["age"] = df["age"].fillna(median_age)
 
