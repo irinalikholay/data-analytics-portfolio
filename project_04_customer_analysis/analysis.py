@@ -27,3 +27,23 @@ df["age_group"] = df["age"].apply(age_group)
 
 print("Age groups created:")
 print(df[["age", "age_group"]].head())
+
+
+#Total spend by age group
+spend_by_age_group = df.groupby("age_group")["total_spend"].sum()
+
+print("Total spend by age group:")
+print(spend_by_age_group)
+
+
+import matplotlib.pyplot as plt
+
+#Plot total spend by age group 
+spend_by_age_group.plot(kind="bar")
+
+plt.title("Total Spend by Age Group")
+plt.xlabel("Age Group")
+plt.ylabel("Total Spend")
+
+plt.tight_layout()
+plt.show()
