@@ -48,4 +48,5 @@ plt.ylabel("Total Spend")
 plt.tight_layout()
 
 plt.savefig("plots/avg_spend_by_age_group.png")
+plt.close()
 plt.show()
