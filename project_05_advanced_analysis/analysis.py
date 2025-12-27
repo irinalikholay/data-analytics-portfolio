@@ -21,4 +21,21 @@ print(df.isna().sum())
 
 # 3. Convert data types 
 df["order_date"] = pd.to_datetime(df["order_date"])
-print(df.dtypes) 
+print(df.dtypes)
+
+# 4. Create revenue column
+df["revenue"] = df["price"] * df["quantity"]
+
+print("\nRevenue column created:")
+print(df[["price", "quantity", "revenue"]].head())
+
+# 5. Revenue by country
+revenue_by_country = (
+    df
+    .groupby("country")["revenue"]
+    .sum()
+    .sort_values(ascending=False)
+)
+
+print("\nRevenue by country:")
+print(revenue_by_country)
