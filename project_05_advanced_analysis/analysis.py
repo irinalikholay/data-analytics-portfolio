@@ -18,3 +18,7 @@ print(df.dtypes)
 
 print("\nMissing values:")
 print(df.isna().sum())
+
+# 3. Convert data types 
+df["order_date"] = pd.to_datetime(df["order_date"])
+print(df.dtypes) 
