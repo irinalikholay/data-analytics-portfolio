@@ -39,3 +39,19 @@ revenue_by_country = (
 
 print("\nRevenue by country:")
 print(revenue_by_country)
+
+# 6. Revenue over time (by month)
+
+#Extract month from order_date
+df["order_month"] = df["order_date"].dt.to_period("M")
+
+#Aggregate revenue by month 
+monthly_revenue = (
+    df
+    .groupby("order_month")["revenue"]
+    .sum()
+    .reset_index()
+)
+
+print("\nMonthly revenue:")
+print(monthly_revenue.head())
