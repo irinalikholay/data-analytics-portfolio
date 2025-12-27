@@ -4,6 +4,9 @@ import pandas as pd
 df = pd.read_csv("data/sales_customers.csv")
 
 #2. Basic checks 
+print("\nDataset info:")
+print(df.info())
+
 print("Dataset shape:")
 print(df.shape)
 
